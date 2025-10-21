@@ -35,7 +35,9 @@ const Header = ({ toggleTheme, isDark }) => {
   const [initials, setInitials] = useState("");
   const [avatarDropdownOpen, setAvatarDropdownOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem('language') || 'en';
+  });
   const avatarRef = useRef(null);
 
   const navigate = useNavigate();
@@ -63,6 +65,18 @@ const Header = ({ toggleTheme, isDark }) => {
     window.addEventListener("storage", handleStorage);
     return () => window.removeEventListener("storage", handleStorage);
   }, [location.pathname]);
+
+  // Initialize language and dispatch event on mount
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    setLanguage(savedLanguage);
+    if (savedLanguage === "ar" || savedLanguage === "he") {
+      document.documentElement.dir = "rtl";
+    } else {
+      document.documentElement.dir = "ltr";
+    }
+    window.dispatchEvent(new CustomEvent("languageChange", { detail: savedLanguage }));
+  }, []);
 
   // Close avatar dropdown on outside click
   useEffect(() => {
@@ -195,7 +209,7 @@ const Header = ({ toggleTheme, isDark }) => {
         <div className="relative">
           <span
             className={`cursor-pointer font-medium ${
-              activeLink === "home" ? "text-purple-700 dark:text-purple-400" : ""
+              activeLink === "home" ? "text-[#2874f0] dark:text-[#2874f0]" : ""
             }`}
             onClick={() => handleMainClick("home1")}
           >
@@ -213,7 +227,7 @@ const Header = ({ toggleTheme, isDark }) => {
                 to="/home1"
                 onClick={handleLinkClick}
                 className={`px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 ${
-                  location.pathname === "/home1" ? "text-purple-700 dark:text-purple-400 font-bold" : ""
+                  location.pathname === "/home1" ? "text-[#2874f0] dark:text-[#2874f0] font-bold" : ""
                 }`}
               >
                 Home1
@@ -222,7 +236,7 @@ const Header = ({ toggleTheme, isDark }) => {
                 to="/home2"
                 onClick={handleLinkClick}
                 className={`px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 ${
-                  location.pathname === "/home2" ? "text-purple-700 dark:text-purple-400 font-bold" : ""
+                  location.pathname === "/home2" ? "text-[#2874f0] dark:text-[#2874f0] font-bold" : ""
                 }`}
               >
                 Home 2
@@ -236,7 +250,7 @@ const Header = ({ toggleTheme, isDark }) => {
           to="/about"
           onClick={handleLinkClick}
           className={`font-medium ${
-            activeLink === "about" ? "text-purple-700 dark:text-purple-400" : ""
+            activeLink === "about" ? "text-[#2874f0] dark:text-[#2874f0]" : ""
           }`}
         >
           {translations[language].about}
@@ -246,7 +260,7 @@ const Header = ({ toggleTheme, isDark }) => {
         <div className="relative">
           <span
             className={`cursor-pointer font-medium ${
-              activeLink === "services" ? "text-purple-700 dark:text-purple-400" : ""
+              activeLink === "services" ? "text-[#2874f0] dark:text-[#2874f0]" : ""
             }`}
             onClick={() => handleMainClick("services")}
           >
@@ -274,7 +288,7 @@ const Header = ({ toggleTheme, isDark }) => {
                   to={item.to}
                   onClick={handleLinkClick}
                   className={`px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 ${
-                    location.pathname === item.to ? "text-purple-700 dark:text-purple-400 font-bold" : ""
+                    location.pathname === item.to ? "text-[#2874f0] dark:text-[#2874f0] font-bold" : ""
                   }`}
                 >
                   {item.label}
@@ -289,7 +303,7 @@ const Header = ({ toggleTheme, isDark }) => {
           to="/blog"
           onClick={handleLinkClick}
           className={`font-medium ${
-            activeLink === "blog" ? "text-purple-700 dark:text-purple-400" : ""
+            activeLink === "blog" ? "text-[#2874f0] dark:text-[#2874f0]" : ""
           }`}
         >
           {translations[language].blog}
@@ -300,7 +314,7 @@ const Header = ({ toggleTheme, isDark }) => {
           to="/contact"
           onClick={handleLinkClick}
           className={`font-medium ${
-            activeLink === "contact" ? "text-purple-700 dark:text-purple-400" : ""
+            activeLink === "contact" ? "text-[#2874f0] dark:text-[#2874f0]" : ""
           }`}
         >
           {translations[language].contact}

@@ -179,17 +179,17 @@ const Welcome = () => {
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          marginTop: "80px" // Adjust this value to match your header height
+          marginTop: "0px"
         }}
       >
-        <div className="w-full max-w-md bg-white/20 rounded-2xl shadow-2xl border-2 border-[#25be85] p-8 flex flex-col justify-center items-stretch backdrop-blur">
+        <div className="w-full max-w-md bg-white/30 rounded-2xl shadow-2xl border-2 border-[#2874f0] p-8 flex flex-col justify-center items-stretch backdrop-blur">
           <div className="mb-6 text-center">
             <div className="flex flex-col items-center gap-2">
               <img src={logo} alt="Stackly Logo" className="w-28 h-auto mb-2 drop-shadow" />
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="px-4 py-2 rounded-lg border-2 border-[#25be85] bg-[#f7f3e8] text-[#0a2342] font-semibold focus:outline-none"
+                className="px-4 py-2 rounded-lg border-2 border-[#2874f0] bg-white text-black font-semibold focus:outline-none"
               >
                 <option value="en">English</option>
                 <option value="ar">العربية</option>
@@ -210,7 +210,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="login-username"
-                      className="flex-1 px-4 py-3 rounded-lg border-2 border-[#25be85] bg-[#f7f3e8] text-[#0a2342] font-medium focus:outline-none"
+                      className="flex-1 px-4 py-3 rounded-lg border-2 border-[#2874f0] bg-white text-black font-medium focus:outline-none"
                       type="email"
                       name="email"
                       placeholder={t.email}
@@ -225,7 +225,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="login-password"
-                      className="flex-1 px-4 py-3 rounded-lg border-2 border-[#25be85] bg-[#f7f3e8] text-[#0a2342] font-medium focus:outline-none"
+                      className="flex-1 px-4 py-3 rounded-lg border-2 border-[#2874f0] bg-white text-black font-medium focus:outline-none"
                       type="password"
                       name="password"
                       placeholder={t.password}
@@ -244,7 +244,7 @@ const Welcome = () => {
                   >
                     {t.forgot}
                   </p>
-                  <button type="submit" className="bg-gradient-to-r from-[#25be85] to-black text-white font-bold py-3 rounded-lg shadow-lg text-lg mt-2 hover:from-black hover:to-[#25be85] transition">
+                  <button type="submit" className="bg-[#2874f0] text-white font-bold py-3 rounded-lg shadow-lg text-lg mt-2 hover:bg-black transition">
                     <span role="img" aria-label="user-lock" className="mr-2">👤🔒</span> {t.login}
                   </button>
                   <p className="text-center text-black font-bold mt-4">
@@ -266,7 +266,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="signup-firstName"
-                      style={{ ...styles.input, flex: 1, margin: 0 }}
+                      style={{ ...styles.input, flex: 1, margin: 0, border: '2px solid #2874f0', backgroundColor: '#fff', color: '#000' }}
                       type="text"
                       name="firstName"
                       placeholder={t.firstName}
@@ -281,7 +281,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="signup-lastName"
-                      style={{ ...styles.input, flex: 1, margin: 0 }}
+                      style={{ ...styles.input, flex: 1, margin: 0, border: '2px solid #2874f0', backgroundColor: '#fff', color: '#000' }}
                       type="text"
                       name="lastName"
                       placeholder={t.lastName}
@@ -296,7 +296,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="signup-email"
-                      style={{ ...styles.input, flex: 1, margin: 0 }}
+                      style={{ ...styles.input, flex: 1, margin: 0, border: '2px solid #2874f0', backgroundColor: '#fff', color: '#000' }}
                       type="email"
                       name="email"
                       placeholder={t.email}
@@ -311,7 +311,7 @@ const Welcome = () => {
                     </label>
                     <input
                       id="signup-password"
-                      style={{ ...styles.input, flex: 1, margin: 0 }}
+                      style={{ ...styles.input, flex: 1, margin: 0, border: '2px solid #2874f0', backgroundColor: '#fff', color: '#000' }}
                       type="password"
                       name="password"
                       placeholder={t.password}
@@ -320,7 +320,7 @@ const Welcome = () => {
                       required
                     />
                   </div>
-                  <button type="submit" className="bg-gradient-to-r from-[#25be85] to-black text-white font-bold py-3 rounded-lg shadow-lg text-lg mt-2 hover:from-black hover:to-[#25be85] transition">
+                  <button type="submit" className="bg-[#2874f0] text-white font-bold py-3 rounded-lg shadow-lg text-lg mt-2 hover:bg-black transition">
                     {t.signUp}
                   </button>
                   <p className="text-center text-black font-bold mt-4">
@@ -336,7 +336,7 @@ const Welcome = () => {
                 </form>
               )}
               {error && <p className="text-[#25be85] font-bold mt-2 text-center">{error}</p>}
-              {resetMessage && <p className="text-[#25be85] mt-2 text-center">{resetMessage}</p>}
+              {resetMessage && <p className="text-[#2874f0] mt-2 text-center">{resetMessage}</p>}
             </>
           ) : (
             <>
@@ -365,7 +365,7 @@ const Welcome = () => {
                 </p>
               </form>
               {error && <p style={styles.errorMsg}>{error}</p>}
-              {resetMessage && <p style={{ color: "#25be85", marginTop: 10 }}>{resetMessage}</p>}
+              {resetMessage && <p style={{ color: "#2874f0", marginTop: 10 }}>{resetMessage}</p>}
             </>
           )}
         </div>
@@ -412,7 +412,7 @@ const styles = {
     color: "#000",
   },
   highlight: {
-    color: "##25be85",
+    color: "#2874f0",
   },
   welcomeSubtext: {
     marginBottom: "30px",
@@ -434,7 +434,7 @@ const styles = {
     color: "#000",
   },
   loginButton: {
-    backgroundColor: "#25be85",
+    backgroundColor: "#2874f0",
     color: "#fff",
     fontWeight: "bold",
     border: "none",
@@ -446,7 +446,7 @@ const styles = {
   },
   forgotPassword: {
     textAlign: "right",
-    color: "#25be85",
+    color: "#2874f0",
     cursor: "pointer",
     fontSize: "14px",
     marginTop: "-10px",
@@ -454,14 +454,14 @@ const styles = {
   },
   toggle: {
     cursor: "pointer",
-    color: "#25be85",
+    color: "#2874f0",
     marginTop: "15px",
     textAlign: "center",
     userSelect: "none",
     fontWeight: "bold",
   },
   errorMsg: {
-    color: "#25be85",
+    color: "#2874f0",
     marginTop: "10px",
     fontWeight: "bold",
   },

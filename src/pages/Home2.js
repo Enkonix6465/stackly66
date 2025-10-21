@@ -3,94 +3,356 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Add this import
 import videohero from "../images/home2-law.mp4";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import backcta from "../images/cta.jpg"; // Import background image for CTA section
 
-// Update webinars for law firm context
-const webinars = [
-    {
-        date: "Sep 18, 2025",
-        icon: "📅",
-        title: "Navigating Business Law",
-        desc: "Learn how to protect your business interests and avoid common legal pitfalls."
-    },
-    {
-        date: "Oct 2, 2025",
-        icon: "⚖️",
-        title: "Estate Planning Essentials",
-        desc: "Discover strategies for securing your legacy and ensuring your wishes are honored."
-    },
-    {
-        date: "Oct 16, 2025",
-        icon: "🛡️",
-        title: "Employment Law Updates",
-        desc: "Stay informed about the latest changes in employment law and compliance."
-    }
-];
-const practiceAreas = [
-    {
+// Translation object for multi-language support
+const translations = {
+  en: {
+    // Hero Section
+    heroTitle: "Legal Expertise You Can Trust",
+    heroSubtitle: "Protecting your rights and interests with decades of experience and a proven track record.",
+    
+    // Why Choose Us Section
+    whyChooseTitle: "Why Choose Our Firm?",
+    whyChooseSubtitle: "Proven Results & Client Dedication",
+    whyChoosePara1: "Our reputation is built on integrity, expertise, and a commitment to achieving the best outcomes for our clients.",
+    whyChoosePara2: "From individuals to businesses, we provide comprehensive legal solutions tailored to your unique needs. Our attorneys bring diverse experience and a strategic approach to every case.",
+    whyChoosePara3: "We combine traditional legal values with innovative strategies, ensuring you receive clear guidance and effective representation at every step.",
+    whyChooseButton: "Learn More About Us",
+    
+    // Practice Areas
+    practiceAreasTitle: "Our Practice Areas",
+    practiceAreas: [
+      {
         title: "Corporate Law",
         description: "Business formation, contracts, compliance, and transactions",
         icon: "🏢",
         stats: "98% Success Rate"
-    },
-    {
+      },
+      {
         title: "Family Law",
         description: "Divorce, child custody, adoption, and domestic matters",
         icon: "👨‍👩‍👧‍👦",
         stats: "500+ Cases Resolved"
-    },
-    {
+      },
+      {
         title: "Criminal Defense",
         description: "DUI, drug charges, white collar crimes, and felony defense",
         icon: "⚖️",
         stats: "20+ Years Experience"
-    },
-    {
+      },
+      {
         title: "Real Estate",
         description: "Property transactions, zoning, landlord-tenant disputes",
         icon: "🏠",
         stats: "$2B+ in Transactions"
-    }
-];
-const processSteps = [
-    {
+      }
+    ],
+    
+    // Process Steps
+    processTitle: "Our Legal Process",
+    processSteps: [
+      {
         title: "Initial Consultation",
         description: "We begin with a comprehensive discussion to understand your legal needs, objectives, and concerns.",
         icon: "📞",
         duration: "1-2 Hours",
         participants: ["Client", "Managing Attorney"]
-    },
-    {
+      },
+      {
         title: "Case Evaluation",
         description: "Our legal team conducts thorough research and analysis to develop the optimal strategy for your situation.",
         icon: "🔍",
         duration: "2-5 Days",
         participants: ["Legal Team", "Research Associates"]
-    },
-    {
+      },
+      {
         title: "Strategy Development",
         description: "We craft a customized legal approach tailored to your specific circumstances and desired outcomes.",
         icon: "♟️",
         duration: "3-7 Days",
         participants: ["Senior Attorneys", "Case Strategists"]
-    },
-    {
+      },
+      {
         title: "Implementation",
         description: "Our team executes the planned strategy with precision while keeping you informed at every stage.",
         icon: "⚡",
         duration: "Case Dependent",
         participants: ["Legal Team", "Client"]
-    },
-    {
+      },
+      {
         title: "Resolution & Follow-up",
         description: "We secure the best possible outcome and provide guidance to prevent future legal issues.",
         icon: "✅",
         duration: "Ongoing Support",
         participants: ["Client", "Primary Attorney"]
-    }
-];
+      }
+    ],
+    
+    // Webinars
+    webinarsTitle: "Legal Education Webinars",
+    webinars: [
+      {
+        date: "Sep 18, 2025",
+        icon: "📅",
+        title: "Navigating Business Law",
+        desc: "Learn how to protect your business interests and avoid common legal pitfalls."
+      },
+      {
+        date: "Oct 2, 2025",
+        icon: "⚖️",
+        title: "Estate Planning Essentials",
+        desc: "Discover strategies for securing your legacy and ensuring your wishes are honored."
+      },
+      {
+        date: "Oct 16, 2025",
+        icon: "🛡️",
+        title: "Employment Law Updates",
+        desc: "Stay informed about the latest changes in employment law and compliance."
+      }
+    ],
+    
+    // CTA Section
+    ctaTitle: "Ready to Protect Your Interests?",
+    ctaDesc: "Contact our experienced legal team for a consultation tailored to your specific needs.",
+    ctaButton: "Schedule Consultation"
+  },
+  ar: {
+    // Hero Section
+    heroTitle: "خبرة قانونية يمكنك الثقة بها",
+    heroSubtitle: "حماية حقوقك ومصالحك بعقود من الخبرة وسجل حافل مُثبت.",
+    
+    // Why Choose Us Section
+    whyChooseTitle: "لماذا تختار مكتبنا؟",
+    whyChooseSubtitle: "نتائج مثبتة وتفاني في خدمة العملاء",
+    whyChoosePara1: "سمعتنا مبنية على النزاهة والخبرة والالتزام بتحقيق أفضل النتائج لعملائنا.",
+    whyChoosePara2: "من الأفراد إلى الشركات، نحن نقدم حلولاً قانونية شاملة مصممة خصيصاً لاحتياجاتك الفريدة. يجلب محامونا خبرة متنوعة ونهجاً استراتيجياً لكل قضية.",
+    whyChoosePara3: "نحن نجمع بين القيم القانونية التقليدية والاستراتيجيات المبتكرة، مما يضمن حصولك على توجيهات واضحة وتمثيل فعال في كل خطوة.",
+    whyChooseButton: "تعرف على المزيد عنا",
+    
+    // Practice Areas
+    practiceAreasTitle: "مجالات ممارستنا",
+    practiceAreas: [
+      {
+        title: "قانون الشركات",
+        description: "تكوين الأعمال والعقود والامتثال والمعاملات",
+        icon: "🏢",
+        stats: "معدل نجاح 98%"
+      },
+      {
+        title: "قانون الأسرة",
+        description: "الطلاق وحضانة الأطفال والتبني والمسائل الأسرية",
+        icon: "👨‍👩‍👧‍👦",
+        stats: "تم حل أكثر من 500 قضية"
+      },
+      {
+        title: "الدفاع الجنائي",
+        description: "القيادة تحت التأثير وتهم المخدرات والجرائم ذات الياقات البيضاء والدفاع في الجنايات",
+        icon: "⚖️",
+        stats: "أكثر من 20 سنة خبرة"
+      },
+      {
+        title: "العقارات",
+        description: "معاملات الممتلكات والتقسيم المناطقي ونزاعات المالك والمستأجر",
+        icon: "🏠",
+        stats: "أكثر من 2 مليار دولار في المعاملات"
+      }
+    ],
+    
+    // Process Steps
+    processTitle: "عمليتنا القانونية",
+    processSteps: [
+      {
+        title: "الاستشارة الأولية",
+        description: "نبدأ بمناقشة شاملة لفهم احتياجاتك القانونية وأهدافك ومخاوفك.",
+        icon: "📞",
+        duration: "1-2 ساعة",
+        participants: ["العميل", "المحامي المدير"]
+      },
+      {
+        title: "تقييم القضية",
+        description: "يجري فريقنا القانوني بحثاً وتحليلاً شاملاً لوضع الاستراتيجية المثلى لوضعك.",
+        icon: "🔍",
+        duration: "2-5 أيام",
+        participants: ["الفريق القانوني", "زملاء البحث"]
+      },
+      {
+        title: "تطوير الاستراتيجية",
+        description: "نصوغ نهجاً قانونياً مخصصاً مصمماً لظروفك المحددة والنتائج المرغوبة.",
+        icon: "♟️",
+        duration: "3-7 أيام",
+        participants: ["المحامون الكبار", "استراتيجيو القضايا"]
+      },
+      {
+        title: "التنفيذ",
+        description: "ينفذ فريقنا الاستراتيجية المخططة بدقة مع إبقائك على اطلاع في كل مرحلة.",
+        icon: "⚡",
+        duration: "يعتمد على القضية",
+        participants: ["الفريق القانوني", "العميل"]
+      },
+      {
+        title: "الحل والمتابعة",
+        description: "نؤمن أفضل نتيجة ممكنة ونقدم التوجيه لمنع المشاكل القانونية المستقبلية.",
+        icon: "✅",
+        duration: "دعم مستمر",
+        participants: ["العميل", "المحامي الأساسي"]
+      }
+    ],
+    
+    // Webinars
+    webinarsTitle: "ندوات التعليم القانوني",
+    webinars: [
+      {
+        date: "18 سبتمبر، 2025",
+        icon: "📅",
+        title: "التنقل في قانون الأعمال",
+        desc: "تعلم كيفية حماية مصالح عملك وتجنب المخاطر القانونية الشائعة."
+      },
+      {
+        date: "2 أكتوبر، 2025",
+        icon: "⚖️",
+        title: "أساسيات تخطيط التركات",
+        desc: "اكتشف استراتيجيات تأمين إرثك وضمان تكريم رغباتك."
+      },
+      {
+        date: "16 أكتوبر، 2025",
+        icon: "🛡️",
+        title: "تحديثات قانون العمل",
+        desc: "ابق على اطلاع بأحدث التغييرات في قانون العمل والامتثال."
+      }
+    ],
+    
+    // CTA Section
+    ctaTitle: "مستعد لحماية مصالحك؟",
+    ctaDesc: "اتصل بفريقنا القانوني ذو الخبرة للحصول على استشارة مصممة لاحتياجاتك المحددة.",
+    ctaButton: "جدولة استشارة"
+  },
+  he: {
+    // Hero Section
+    heroTitle: "מומחיות משפטית שאתה יכול לסמוך עליה",
+    heroSubtitle: "הגנה על זכויותיך ואינטרסים שלך עם עשרות שנות ניסיון ורקורד מוכח.",
+    
+    // Why Choose Us Section
+    whyChooseTitle: "למה לבחור במשרד שלנו?",
+    whyChooseSubtitle: "תוצאות מוכחות והתמסרות ללקוחות",
+    whyChoosePara1: "המוניטין שלנו בנוי על יושרה, מומחיות והתחייבות להשגת התוצאות הטובות ביותר עבור הלקוחות שלנו.",
+    whyChoosePara2: "מאנשים פרטיים ועד עסקים, אנחנו מספקים פתרונות משפטיים מקיפים המותאמים לצרכים הייחודיים שלך. עורכי הדין שלנו מביאים ניסיון מגוון וגישה אסטרטגית לכל תיק.",
+    whyChoosePara3: "אנחנו משלבים ערכים משפטיים מסורתיים עם אסטרטגיות חדשניות, מבטיחים שתקבל הדרכה ברורה וייצוג יעיל בכל שלב.",
+    whyChooseButton: "למד עוד עלינו",
+    
+    // Practice Areas
+    practiceAreasTitle: "תחומי הפרקטיקה שלנו",
+    practiceAreas: [
+      {
+        title: "דיני חברות",
+        description: "הקמת עסקים, חוזים, ציות ועסקאות",
+        icon: "🏢",
+        stats: "98% שיעור הצלחה"
+      },
+      {
+        title: "דיני משפחה",
+        description: "גירושין, משמורת ילדים, אימוץ ועניינים משפחתיים",
+        icon: "👨‍👩‍👧‍👦",
+        stats: "יותר מ-500 תיקים נפתרו"
+      },
+      {
+        title: "הגנה פלילית",
+        description: "נהיגה בשכרות, אישומי סמים, פשעי צווארון לבן והגנה בפלילים",
+        icon: "⚖️",
+        stats: "יותר מ-20 שנות ניסיון"
+      },
+      {
+        title: "נדל\"ן",
+        description: "עסקאות נכסים, ייעוד ומחלוקות בעל-שוכר",
+        icon: "🏠",
+        stats: "יותר מ-2 מיליארד דולר בעסקאות"
+      }
+    ],
+    
+    // Process Steps
+    processTitle: "התהליך המשפטי שלנו",
+    processSteps: [
+      {
+        title: "ייעוץ ראשוני",
+        description: "אנחנו מתחילים בדיון מקיף כדי להבין את הצרכים המשפטיים, המטרות והחששות שלך.",
+        icon: "📞",
+        duration: "1-2 שעות",
+        participants: ["לקוח", "עורך דין ראשי"]
+      },
+      {
+        title: "הערכת תיק",
+        description: "הצוות המשפטי שלנו מבצע מחקר ואנליזה יסודיים לפיתוח האסטרטגיה האופטימלית למצב שלך.",
+        icon: "🔍",
+        duration: "2-5 ימים",
+        participants: ["צוות משפטי", "עמיתי מחקר"]
+      },
+      {
+        title: "פיתוח אסטרטגיה",
+        description: "אנחנו יוצרים גישה משפטית מותאמת אישית המיועדת לנסיבות הספציפיות שלך ולתוצאות הרצויות.",
+        icon: "♟️",
+        duration: "3-7 ימים",
+        participants: ["עורכי דין בכירים", "אסטרטגי תיקים"]
+      },
+      {
+        title: "יישום",
+        description: "הצוות שלנו מבצע את האסטרטגיה המתוכננת בדיוק תוך עדכונך בכל שלב.",
+        icon: "⚡",
+        duration: "תלוי בתיק",
+        participants: ["צוות משפטי", "לקוח"]
+      },
+      {
+        title: "פתרון ומעקב",
+        description: "אנחנו מבטיחים את התוצאה הטובה ביותר האפשרית ומספקים הדרכה למניעת בעיות משפטיות עתידיות.",
+        icon: "✅",
+        duration: "תמיכה מתמשכת",
+        participants: ["לקוח", "עורך דין ראשי"]
+      }
+    ],
+    
+    // Webinars
+    webinarsTitle: "סמינרים חינוכיים משפטיים",
+    webinars: [
+      {
+        date: "18 בספטמבר, 2025",
+        icon: "📅",
+        title: "ניווט בדיני עסקים",
+        desc: "למד כיצד להגן על האינטרסים העסקיים שלך ולמנוע מלכודות משפטיות נפוצות."
+      },
+      {
+        date: "2 באוקטובר, 2025",
+        icon: "⚖️",
+        title: "יסודות תכנון עיזבון",
+        desc: "גלה אסטרטגיות לאבטחת המורשת שלך ולהבטחת כיבוד רצונותיך."
+      },
+      {
+        date: "16 באוקטובר, 2025",
+        icon: "🛡️",
+        title: "עדכוני דיני עבודה",
+        desc: "הישאר מעודכן על השינויים האחרונים בדיני עבודה וציות."
+      }
+    ],
+    
+    // CTA Section
+    ctaTitle: "מוכן להגן על האינטרסים שלך?",
+    ctaDesc: "צור קשר עם הצוות המשפטי המנוסה שלנו לייעוץ המותאם לצרכים הספציפיים שלך.",
+    ctaButton: "תזמן ייעוץ"
+  }
+};
+
 const Home2 = () => {
+    // Language state management
+    const [language, setLanguage] = useState(() => {
+        return localStorage.getItem('language') || 'en';
+    });
+    
+    // Get translations for current language
+    const t = translations[language] || translations.en;
+    
+    // Dynamic arrays based on current language
+    const webinars = t.webinars;
+    const practiceAreas = t.practiceAreas;
+    const processSteps = t.processSteps;
     const [showModal, setShowModal] = useState(false);
     const [selectedWebinar, setSelectedWebinar] = useState(null);
     const [formData, setFormData] = useState({ name: "", email: "" });
@@ -118,8 +380,21 @@ const Home2 = () => {
     const [activeCategory, setActiveCategory] = useState(0);
     const [activeStep, setActiveStep] = useState(0);
 
+    // Language change event listener
+    useEffect(() => {
+        const handleLanguageChange = (event) => {
+            setLanguage(event.detail);
+        };
+
+        window.addEventListener('languageChange', handleLanguageChange);
+        
+        return () => {
+            window.removeEventListener('languageChange', handleLanguageChange);
+        };
+    }, []);
+
     return (
-        <>
+        <div dir={language === 'ar' || language === 'he' ? 'rtl' : 'ltr'}>
             <section className="relative w-screen h-screen m-0 p-0">
                 {/* Background Video */}
                 <video
@@ -131,8 +406,8 @@ const Home2 = () => {
                 />
                 {/* Overlay and Tagline */}
                 <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center z-10 px-4">
-                    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Legal Expertise You Can Trust</h1>
-                    <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">Protecting your rights and interests with decades of experience and a proven track record.</p>
+                    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">{t.heroTitle}</h1>
+                    <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">{t.heroSubtitle}</p>
                 </div>
             </section>
 
@@ -140,11 +415,11 @@ const Home2 = () => {
                 <div className="max-w-6xl w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     {/* Left Side: Unified Panel, No Card */}
                     <div className="flex flex-col justify-center h-full">
-                        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-black dark:text-white">Why Choose Our Firm?</h2>
-                        <h3 className="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-300">Proven Results & Client Dedication</h3>
-                        <p className="text-gray-800 dark:text-gray-200 mb-4">Our reputation is built on integrity, expertise, and a commitment to achieving the best outcomes for our clients.</p>
-                        <p className="text-gray-700 dark:text-gray-300 mb-4">From individuals to businesses, we provide comprehensive legal solutions tailored to your unique needs. Our attorneys bring diverse experience and a strategic approach to every case.</p>
-                        <p className="text-gray-700 dark:text-gray-300 mb-6">We combine traditional legal values with innovative strategies, ensuring you receive clear guidance and effective representation at every step.</p>
+                        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-black dark:text-white">{t.whyChooseTitle}</h2>
+                        <h3 className="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-300">{t.whyChooseSubtitle}</h3>
+                        <p className="text-gray-800 dark:text-gray-200 mb-4">{t.whyChoosePara1}</p>
+                        <p className="text-gray-700 dark:text-gray-300 mb-4">{t.whyChoosePara2}</p>
+                        <p className="text-gray-700 dark:text-gray-300 mb-6">{t.whyChoosePara3}</p>
                         <button
                             className="bg-black text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition w-fit"
                             onClick={() => navigate("/about")}
@@ -226,7 +501,7 @@ const Home2 = () => {
             <section className={`py-16 bg-white dark:bg-black`}>
                 <div className="container mx-auto px-4">
                     <h2 className={`text-4xl font-serif font-bold text-center mb-12`}>
-                        How Can We <span style={{ color: '#2874f0' }}>Help You</span> Today?
+                        {t.practiceAreasTitle}
                     </h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -260,7 +535,7 @@ const Home2 = () => {
             <section className="py-16 bg-white dark:bg-black">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4 dark:text-white">Our Legal Process</h2>
+                        <h2 className="text-4xl font-serif font-bold text-gray-900 mb-4 dark:text-white">{t.processTitle}</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto dark:text-white">
                             Transparent, methodical approach to achieving successful outcomes for our clients
                         </p>
@@ -366,7 +641,7 @@ const Home2 = () => {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 dark:text-white mb-4">
-                            Continuing Legal Education Webinars
+                            {t.webinarsTitle}
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                             Join our expert attorneys for insightful discussions on current legal topics and developments.
@@ -559,17 +834,17 @@ const Home2 = () => {
             >
                 <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
                 <div className="max-w-2xl w-full mx-auto px-4 text-center relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Ready to Discuss Your Case?</h2>
-                    <p className="text-lg text-blue-200 mb-8">Schedule a free consultation with one of our experienced attorneys today and take the first step toward a positive resolution.</p>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">{t.ctaTitle}</h2>
+                    <p className="text-lg text-blue-200 mb-8">{t.ctaDesc}</p>
                     <button
                         className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-blue-200 transition-all text-xl"
                         onClick={() => navigate("/contact")}
                     >
-                        Contact Us Now
+                        {t.ctaButton}
                     </button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 export default Home2;

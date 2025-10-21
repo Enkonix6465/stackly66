@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "./compentents/Header";
 import Home1 from "./pages/Home1"; // ✅ import Home1
 import Home2 from "./pages/Home2"; // ✅ import Home2
@@ -17,6 +18,8 @@ import Blog2 from "./pages/Blog2";
 import Blog3 from "./pages/Blog3";  
 import AdminDashboard from "./pages/AdminDashboard"; // ✅ import AdminDashboard
 import Welcome from "./pages/Welcome"; // ✅ import Welcome
+import Footer from "./compentents/Footer";
+import ContactUs from "./pages/ContactUs";
 function App() {
   const [isDark, setIsDark] = useState(false);
 
@@ -42,14 +45,16 @@ function App() {
     });
   };
 
+  const location = useLocation();
+  const isWelcome = location.pathname === "/welcome" || location.pathname === "/";
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
-      <Header toggleTheme={toggleTheme} isDark={isDark} />
-
+      {!isWelcome && <Header toggleTheme={toggleTheme} isDark={isDark} />}
       <main className="p-0 m-0">
         <Routes>
-          <Route path="/home1" element={<Home1 />} /> {/* ✅ route */}
-          <Route path="/home2" element={<Home2 />} /> {/* ✅ route */}
+          <Route path="/home1" element={<Home1 />} />
+          <Route path="/home2" element={<Home2 />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/corporate-law" element={<CorporateLaw />} />
@@ -63,12 +68,14 @@ function App() {
           <Route path="/blog2" element={<Blog2 />} />
           <Route path="/blog3" element={<Blog3 />} />
           <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="*" element={<Welcome />} /> 
+          <Route path="*" element={<Welcome />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </main>
+      {!isWelcome && <Footer />}
     </div>
   );
-}
 
+}
 export default App;
