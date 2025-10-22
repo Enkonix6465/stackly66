@@ -11,14 +11,14 @@ const translations = {
     heroSubtitle: "Protecting your rights with decades of experience and a track record of success.",
     heroButton1: "Free Consultation",
     heroButton2: "Our Services",
-    
+
     // About Section
     aboutTitle: "Our",
     aboutTitleHighlight: "Commitment",
     aboutTitleEnd: "to Excellence",
     aboutPara1: "Founded on the principles of integrity, expertise, and client dedication, our firm has been serving clients with distinction for over two decades. We combine traditional legal values with innovative approaches to meet today's complex legal challenges.",
     aboutPara2: "Our attorneys bring diverse perspectives and specialized knowledge to each case, ensuring comprehensive representation that addresses every aspect of your legal needs. We measure our success by your satisfaction and the positive outcomes we achieve together.",
-    
+
     // Why Choose Us
     whyChooseTitle: "Why Clients Choose Us",
     whyChoose1: "Personalized attention from experienced attorneys",
@@ -26,7 +26,7 @@ const translations = {
     whyChoose3: "Strategic approach tailored to your specific goals",
     whyChoose4: "Proven track record of successful outcomes",
     whyChoose5: "Respect for your time and resources",
-    
+
     // Core Values
     coreValuesTitle: "Our Core Values",
     value1Title: "Client-Centered Approach",
@@ -35,15 +35,15 @@ const translations = {
     value2Desc: "We believe in honest communication and ethical practice. Our clients receive straightforward advice about their options, potential outcomes, and costs, with no hidden fees or surprises throughout the legal process.",
     value3Title: "Strategic Excellence",
     value3Desc: "Our team combines deep legal knowledge with creative problem-solving. We develop innovative approaches to complex legal challenges, drawing on diverse expertise across multiple practice areas to achieve optimal results.",
-    
+
     // Statistics
     statsLabels: {
       cases: "Cases Won",
-      satisfaction: "Client Satisfaction", 
+      satisfaction: "Client Satisfaction",
       experience: "Years Experience",
       recovered: "Recovered for Clients"
     },
-    
+
     // Case Results
     caseResultsTitle: "Recent Case Results",
     caseResults: [
@@ -54,7 +54,7 @@ const translations = {
         year: "2023"
       },
       {
-        category: "Corporate Law", 
+        category: "Corporate Law",
         result: "Won",
         description: "Successful defense in $50M breach of contract case",
         year: "2023"
@@ -67,14 +67,14 @@ const translations = {
       },
       {
         category: "Real Estate",
-        result: "$4.2M", 
+        result: "$4.2M",
         description: "Recovered in construction dispute litigation",
         year: "2022"
       },
       {
         category: "Criminal Defense",
         result: "Acquitted",
-        description: "Not guilty verdict in federal fraud case", 
+        description: "Not guilty verdict in federal fraud case",
         year: "2022"
       },
       {
@@ -84,7 +84,7 @@ const translations = {
         year: "2022"
       }
     ],
-    
+
     // Testimonials
     testimonialsTitle: "What Our Clients Say",
     testimonials: [
@@ -95,14 +95,14 @@ const translations = {
         rating: 5
       },
       {
-        name: "Jennifer Martinez", 
+        name: "Jennifer Martinez",
         case: "Family Law Matter",
         text: "During my difficult divorce, my attorney provided not only legal expertise but also emotional support. They fought for my rights and achieved a better outcome than I expected.",
         rating: 5
       },
       {
         name: "James Wilson",
-        case: "Real Estate Dispute", 
+        case: "Real Estate Dispute",
         text: "I was facing a complicated property dispute that seemed hopeless. The legal strategy developed by this firm was brilliant and resolved the issue in my favor efficiently.",
         rating: 4
       }
@@ -112,24 +112,24 @@ const translations = {
     // Hero Section
     heroTitle: "تمثيل قانوني متخصص",
     heroSubtitle: "حماية حقوقك بعقود من الخبرة وسجل حافل من النجاح.",
-    heroButton1: "استشارة مجانية", 
+    heroButton1: "استشارة مجانية",
     heroButton2: "خدماتنا",
-    
+
     // About Section
     aboutTitle: "التزامنا",
     aboutTitleHighlight: "بالتميز",
     aboutTitleEnd: "",
     aboutPara1: "تأسست شركتنا على مبادئ النزاهة والخبرة والتفاني في خدمة العملاء، وقد كانت تخدم العملاء بامتياز لأكثر من عقدين. نحن نجمع بين القيم القانونية التقليدية والأساليب المبتكرة لمواجهة التحديات القانونية المعقدة اليوم.",
     aboutPara2: "يجلب محامونا وجهات نظر متنوعة ومعرفة متخصصة لكل قضية، مما يضمن تمثيلاً شاملاً يعالج كل جانب من جوانب احتياجاتك القانونية. نحن نقيس نجاحنا برضاك والنتائج الإيجابية التي نحققها معاً.",
-    
+
     // Why Choose Us
     whyChooseTitle: "لماذا يختارنا العملاء",
     whyChoose1: "اهتمام شخصي من محامين ذوي خبرة",
     whyChoose2: "تواصل واضح وتحديثات منتظمة للقضية",
-    whyChoose3: "نهج استراتيجي مصمم لأهدافك المحددة", 
+    whyChoose3: "نهج استراتيجي مصمم لأهدافك المحددة",
     whyChoose4: "سجل مثبت من النتائج الناجحة",
     whyChoose5: "احترام وقتك ومواردك",
-    
+
     // Core Values
     coreValuesTitle: "قيمنا الأساسية",
     value1Title: "نهج يركز على العميل",
@@ -138,15 +138,15 @@ const translations = {
     value2Desc: "نحن نؤمن بالتواصل الصادق والممارسة الأخلاقية. يتلقى عملاؤنا نصائح مباشرة حول خياراتهم والنتائج المحتملة والتكاليف، بدون رسوم خفية أو مفاجآت طوال العملية القانونية.",
     value3Title: "التميز الاستراتيجي",
     value3Desc: "يجمع فريقنا بين المعرفة القانونية العميقة وحل المشكلات الإبداعي. نحن نطور أساليب مبتكرة للتحديات القانونية المعقدة، مستفيدين من الخبرة المتنوعة عبر مجالات ممارسة متعددة لتحقيق النتائج المثلى.",
-    
+
     // Statistics  
     statsLabels: {
       cases: "القضايا المكسوبة",
       satisfaction: "رضا العملاء",
-      experience: "سنوات الخبرة", 
+      experience: "سنوات الخبرة",
       recovered: "تم استردادها للعملاء"
     },
-    
+
     // Case Results
     caseResultsTitle: "نتائج القضايا الأخيرة",
     caseResults: [
@@ -158,7 +158,7 @@ const translations = {
       },
       {
         category: "قانون الشركات",
-        result: "فوز", 
+        result: "فوز",
         description: "دفاع ناجح في قضية خرق عقد بقيمة 50 مليون دولار",
         year: "2023"
       },
@@ -169,7 +169,7 @@ const translations = {
         year: "2023"
       },
       {
-        category: "العقارات", 
+        category: "العقارات",
         result: "$4.2M",
         description: "تم الاسترداد في نزاع البناء",
         year: "2022"
@@ -181,13 +181,13 @@ const translations = {
         year: "2022"
       },
       {
-        category: "الملكية الفكرية", 
+        category: "الملكية الفكرية",
         result: "فوز",
         description: "قضية انتهاك براءة اختراع لشركة تقنية ناشئة",
         year: "2022"
       }
     ],
-    
+
     // Testimonials
     testimonialsTitle: "ما يقوله عملاؤنا",
     testimonials: [
@@ -199,7 +199,7 @@ const translations = {
       },
       {
         name: "جينيفر مارتينيز",
-        case: "مسألة قانون الأسرة", 
+        case: "مسألة قانون الأسرة",
         text: "خلال طلاقي الصعب، قدم محاميي ليس فقط الخبرة القانونية ولكن أيضاً الدعم العاطفي. حاربوا من أجل حقوقي وحققوا نتيجة أفضل مما توقعت.",
         rating: 5
       },
@@ -217,22 +217,22 @@ const translations = {
     heroSubtitle: "הגנה על זכויותיך עם עשרות שנות ניסיון ורקורד מוכח של הצלחה.",
     heroButton1: "ייעוץ חינם",
     heroButton2: "השירותים שלנו",
-    
+
     // About Section
     aboutTitle: "המחויבות שלנו",
     aboutTitleHighlight: "למצוינות",
     aboutTitleEnd: "",
     aboutPara1: "נוסדה על עקרונות של יושרה, מומחיות והתמסרות ללקוחות, החברה שלנו משרתת לקוחות בהצטיינות למעלה משני עשורים. אנו משלבים ערכים משפטיים מסורתיים עם גישות חדשניות כדי להתמודד עם האתגרים המשפטיים המורכבים של היום.",
     aboutPara2: "עורכי הדין שלנו מביאים נקודות מבט מגוונות וידע מתמחה לכל תיק, מבטיחים ייצוג מקיף המתייחס לכל היבט של הצרכים המשפטיים שלך. אנו מודדים את הצלחתנו בשביעות הרצון שלך ובתוצאות החיוביות שאנו משיגים יחד.",
-    
+
     // Why Choose Us  
     whyChooseTitle: "למה לקוחות בוחרים בנו",
     whyChoose1: "תשומת לב אישית מעורכי דין מנוסים",
     whyChoose2: "תקשורת ברורה ועדכונים קבועים על התיק",
     whyChoose3: "גישה אסטרטגית המותאמת למטרות הספציפיות שלך",
-    whyChoose4: "רקורד מוכח של תוצאות מוצלחות", 
+    whyChoose4: "רקורד מוכח של תוצאות מוצלחות",
     whyChoose5: "כבוד לזמן והמשאבים שלך",
-    
+
     // Core Values
     coreValuesTitle: "הערכים הליבה שלנו",
     value1Title: "גישה ממוקדת לקוח",
@@ -241,7 +241,7 @@ const translations = {
     value2Desc: "אנו מאמינים בתקשורת כנה ובפרקטיקה אתית. הלקוחות שלנו מקבלים עצות ישירות לגבי האפשרויות שלהם, התוצאות הפוטנציאליות והעלויות, ללא עמלות נסתרות או הפתעות לאורך התהליך המשפטי.",
     value3Title: "מצוינות אסטרטגית",
     value3Desc: "הצוות שלנו משלב ידע משפטי עמוק עם פתרון בעיות יצירתי. אנו מפתחים גישות חדשניות לאתגרים משפטיים מורכבים, מסתמכים על מומחיות מגוונת בתחומי פרקטיקה מרובים כדי להשיג תוצאות אופטימליות.",
-    
+
     // Statistics
     statsLabels: {
       cases: "תיקים שנוצחו",
@@ -249,13 +249,13 @@ const translations = {
       experience: "שנות ניסיון",
       recovered: "הושב ללקוחות"
     },
-    
+
     // Case Results
     caseResultsTitle: "תוצאות תיקים אחרונות",
     caseResults: [
       {
         category: "פגיעה אישית",
-        result: "$2.5M", 
+        result: "$2.5M",
         description: "פשרה עבור לקוח שנפגע בתאונת משאית",
         year: "2023"
       },
@@ -274,7 +274,7 @@ const translations = {
       {
         category: "נדל\"ן",
         result: "$4.2M",
-        description: "הושב במשפט מחלוקת בנייה", 
+        description: "הושב במשפט מחלוקת בנייה",
         year: "2022"
       },
       {
@@ -290,13 +290,13 @@ const translations = {
         year: "2022"
       }
     ],
-    
+
     // Testimonials
     testimonialsTitle: "מה הלקוחות שלנו אומרים",
     testimonials: [
       {
         name: "רוברט וויליאמס",
-        case: "רכישת חברה", 
+        case: "רכישת חברה",
         text: "הצוות בחברה הזו טיפל ברכישה רב-מיליונית שלנו עם מומחיות יוצאת דופן. הם היו תמיד זמינים לענות על שאלות והפכו את התהליך המורכב למובן.",
         rating: 5
       },
@@ -307,7 +307,7 @@ const translations = {
         rating: 5
       },
       {
-        name: "ג'יימס ווילסון", 
+        name: "ג'יימס ווילסון",
         case: "מחלוקת נדל\"ן",
         text: "התמודדתי עם מחלוקת נכסים מורכבת שנראתה חסרת תקווה. האסטרטגיה המשפטית שפותחה על ידי החברה הזו הייתה מבריקה ופתרה את הבעיה לטובתי ביעילות.",
         rating: 4
@@ -385,14 +385,14 @@ const Home1 = ({ isDark }) => {
   const [language, setLanguage] = useState(() => {
     return localStorage.getItem('language') || 'en';
   });
-  
+
   // Get translations for current language
   const t = translations[language] || translations.en;
-  
+
   // Dynamic arrays based on current language
   const caseResults = t.caseResults;
   const testimonials = t.testimonials;
-  
+
   // Stats array with translated labels
   const stats = [
     { number: 500, suffix: "+", label: t.statsLabels.cases },
@@ -400,7 +400,7 @@ const Home1 = ({ isDark }) => {
     { number: 25, suffix: "+", label: t.statsLabels.experience },
     { number: 150, suffix: "M+", label: t.statsLabels.recovered }
   ];
-  
+
   // Dynamic values array
   const values = [
     {
@@ -416,7 +416,7 @@ const Home1 = ({ isDark }) => {
       description: t.value3Desc
     }
   ];
-  
+
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [counted, setCounted] = useState(false);
   const [cases, setCases] = useState(0);
@@ -444,7 +444,7 @@ const Home1 = ({ isDark }) => {
     };
 
     window.addEventListener('languageChange', handleLanguageChange);
-    
+
     return () => {
       window.removeEventListener('languageChange', handleLanguageChange);
     };
@@ -553,19 +553,19 @@ const Home1 = ({ isDark }) => {
       </section>
 
       {/* About Section */}
-      <section ref={sectionRef} className={`py-10 bg-white dark:bg-black relative overflow-hidden`}>
+      <section ref={sectionRef} className={`py-8 bg-white dark:bg-black relative overflow-hidden mb-0`}>
         {/* Decorative elements */}
         <div className={`absolute bottom-10 -left-20 w-40 h-40 dark:bg-gray-900  rounded-full`}></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 mb-16">
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
               <div className={`transition-all duration-700 ease-in-out`}>
-                <h2 className={`text-4xl md:text-5xl font-serif font-bold  mb-6`}>
+                <h2 className={`text-4xl md:text-5xl font-serif font-bold  mb-4`}>
                   {t.aboutTitle} <span className="text-blue-600">{t.aboutTitleHighlight}</span> {t.aboutTitleEnd}
                 </h2>
-                <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                <p className={`text-lg  leading-relaxed mb-6`}>
+                <div className="w-24 h-1 bg-blue-600 mb-6"></div>
+                <p className={`text-lg  leading-relaxed mb-4`}>
                   {t.aboutPara1}
                 </p>
                 <p className={`text-lg  leading-relaxed`}>
@@ -573,35 +573,35 @@ const Home1 = ({ isDark }) => {
                 </p>
               </div>
 
-              <div className={`p-8 rounded-lg border-l-4 border-blue-600 `}>
-                <h3 className={`text-2xl font-semibold  mb-6`}>{t.whyChooseTitle}</h3>
-                <ul className="space-y-4">
+              <div className={`p-6 rounded-lg border-l-4 border-blue-600 `}>
+                <h3 className={`text-2xl font-semibold  mb-4`}>{t.whyChooseTitle}</h3>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-4 mt-1`}>
+                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-3 mt-1`}>
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <span>{t.whyChoose1}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className={`flex-shrink-0 w-6 h-6  ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-4 mt-1`}>
+                    <div className={`flex-shrink-0 w-6 h-6  ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-3 mt-1`}>
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <span>{t.whyChoose2}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-4 mt-1`}>
+                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-3 mt-1`}>
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <span>{t.whyChoose3}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-4 mt-1`}>
+                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-3 mt-1`}>
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <span>{t.whyChoose4}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-4 mt-1`}>
+                    <div className={`flex-shrink-0 w-6 h-6 ${isDark ? 'bg-blue-900' : 'bg-blue-100'} rounded-full flex items-center justify-center mr-3 mt-1`}>
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <span>{t.whyChoose5}</span>
@@ -610,21 +610,21 @@ const Home1 = ({ isDark }) => {
               </div>
             </div>
 
-            <div className="mb-1">
-              <h3 className={`text-3xl font-serif font-bold text-center ${isDark ? 'text-white' : 'text-white'} mb-12`}>{t.coreValuesTitle}</h3>
+            <div className="mb-1 mt-0">
+              <h3 className={`text-3xl font-serif font-bold text-center ${isDark ? 'text-white' : 'text-white'} mb-8`}>{t.coreValuesTitle}</h3>
 
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-3 gap-6">
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className={`p-6 border rounded-lg transition-all duration-300 cursor-pointer ${activeValue === index
+                    className={`p-4 border rounded-lg transition-all duration-300 cursor-pointer ${activeValue === index
                       ? 'border-blue-600 transform -translate-y-1 shadow-md'
                       : 'border-gray-200 hover:border-blue-300'
                       } `}
                     onClick={() => setActiveValue(index)}
                     onMouseEnter={() => setActiveValue(index)}
                   >
-                    <h4 className={`text-xl font-semibold mb-4 transition-colors ${activeValue === index ? 'text-blue-600' : (isDark ? 'text-white' : 'text-black')
+                    <h4 className={`text-xl font-semibold mb-3 transition-colors ${activeValue === index ? 'text-blue-600' : (isDark ? 'text-white' : 'text-black')
                       }`}>
                       {value.title}
                     </h4>
@@ -639,10 +639,10 @@ const Home1 = ({ isDark }) => {
         </div>
       </section>
 
-     
+
 
       {/* Community Section */}
-      <section className={`py-20 `}>
+      <section className={`py-10 `}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className={`text-3xl md:text-4xl font-serif font-bold mb-4 dark:text-white`}>
@@ -654,7 +654,7 @@ const Home1 = ({ isDark }) => {
           </div>
 
           {/* Community Work Carousel */}
-          <div className="max-w-6xl mx-auto mb-20">
+          <div className="max-w-6xl mx-auto mb-10">
             <div className="relative">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Image */}
@@ -740,10 +740,10 @@ const Home1 = ({ isDark }) => {
             {caseResults.map((caseResult, index) => (
               <div
                 key={index}
-      //           className={`rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-500
-      //   ${isDark ? "bg-gray-700 border border-gray-700" : "bg-white border border-[#2874f0]"}
-      // `}
-      className={`rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 dark:bg-gray-800 border-[#2874f0]'} border`}
+                //           className={`rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-500
+                //   ${isDark ? "bg-gray-700 border border-gray-700" : "bg-white border border-[#2874f0]"}
+                // `}
+                className={`rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-500 dark:bg-gray-800 border-[#2874f0]'} border`}
               >
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
@@ -787,7 +787,7 @@ const Home1 = ({ isDark }) => {
         </div>
       </section>
 
-      
+
 
       {/* Testimonials Section */}
       <section className={`py-16 `}>

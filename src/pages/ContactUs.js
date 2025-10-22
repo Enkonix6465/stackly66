@@ -206,12 +206,13 @@ function ContactUs() {
                 htmlFor="name"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                {t.name}
+                {t.name} <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
+                placeholder={t.name}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
                 required
               />
@@ -221,12 +222,13 @@ function ContactUs() {
                 htmlFor="email"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                {t.email}
+                {t.email} <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
+                placeholder={t.email}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
                 required
               />
@@ -242,6 +244,7 @@ function ContactUs() {
                 type="tel"
                 id="phone"
                 name="phone"
+                placeholder={t.phone}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
               />
             </div>
@@ -256,6 +259,7 @@ function ContactUs() {
                 type="text"
                 id="company"
                 name="company"
+                placeholder={t.company}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
               />
             </div>
@@ -270,6 +274,7 @@ function ContactUs() {
                 type="text"
                 id="subject"
                 name="subject"
+                placeholder={t.subject}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
               />
             </div>
@@ -278,12 +283,13 @@ function ContactUs() {
                 htmlFor="message"
                 className="block text-sm font-medium text-black dark:text-white mb-2"
               >
-                {t.message}
+                {t.message} <span className="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
+                placeholder={t.message}
                 className="w-full px-4 py-2 rounded-lg border border-[#2874f0] bg-gray-50 dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-[#2874f0]"
                 required
               ></textarea>

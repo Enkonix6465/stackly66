@@ -478,12 +478,7 @@ const Immigration= () => {
                     </div>
                   ))}
                 </div>
-                <button 
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-                  onClick={() => handleGetStarted("/case-studies")}
-                >
-                  {currentTranslations.clientStory.button}
-                </button>
+                
               </div>
               <div className="lg:w-1/2">
                 <img

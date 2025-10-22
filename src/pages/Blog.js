@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import video from "../images/law-hero.mp4";
 import { useNavigate } from "react-router-dom"; // Add this import
-
+import image1 from "../images/service1.jpg"
+import image2 from "../images/service4.jpg"
+import image3 from "../images/service5.jpg"
 // Translations object for multi-language support
 const translations = {
   en: {
@@ -371,9 +373,9 @@ const Blog = () => {
       date: t.caseStudies[0].date,
       category: t.caseStudies[0].category,
       description: t.caseStudies[0].description,
-      image: "https://images.unsplash.com/photo-1666214280550-65ef9d1de32b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      image:image1,
       stats: t.caseStudies[0].stats,
-      path: "/cases/merger"
+      
     },
     {
       id: 2,
@@ -381,9 +383,9 @@ const Blog = () => {
       date: t.caseStudies[1].date,
       category: t.caseStudies[1].category,
       description: t.caseStudies[1].description,
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      image: image2,
       stats: t.caseStudies[1].stats,
-      path: "/cases/ip-victory"
+
     },
     {
       id: 3,
@@ -391,9 +393,9 @@ const Blog = () => {
       date: t.caseStudies[2].date,
       category: t.caseStudies[2].category,
       description: t.caseStudies[2].description,
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+      image: image3,
       stats: t.caseStudies[2].stats,
-      path: "/cases/real-estate"
+      
     }
   ];
 
@@ -620,12 +622,7 @@ const Blog = () => {
                       </div>
                     ))}
                   </div>
-                  <button
-                    className="text-[#2874f0] hover:text-blue-800 font-medium text-left"
-                    onClick={() => handleNavigation(caseStudy.path)}
-                  >
-                    {t.viewCaseDetails}
-                  </button>
+                  
                 </div>
               </div>
             ))}

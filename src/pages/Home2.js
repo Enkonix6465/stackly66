@@ -416,12 +416,12 @@ const Home2 = () => {
                     {/* Left Side: Unified Panel, No Card */}
                     <div className="flex flex-col justify-center h-full">
                         <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-black dark:text-white">{t.whyChooseTitle}</h2>
-                        <h3 className="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-300">{t.whyChooseSubtitle}</h3>
+                        <h3 className="text-2xl font-bold mb-4 text-[#2874f0] dark:text-[#2874f0]">{t.whyChooseSubtitle}</h3>
                         <p className="text-gray-800 dark:text-gray-200 mb-4">{t.whyChoosePara1}</p>
                         <p className="text-gray-700 dark:text-gray-300 mb-4">{t.whyChoosePara2}</p>
                         <p className="text-gray-700 dark:text-gray-300 mb-6">{t.whyChoosePara3}</p>
                         <button
-                            className="bg-black text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-700 transition w-fit"
+                            className="bg-black text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-[#2874f0] transition w-fit"
                             onClick={() => navigate("/about")}
                         >
                             Read More
@@ -463,7 +463,7 @@ const Home2 = () => {
                                 viewport={{ once: true }}
                             >
                                 <motion.div
-                                    className="w-14 h-14 aspect-square rounded-full bg-black dark:bg-blue-700 flex items-center justify-center text-2xl font-bold text-white border border-blue-400 shadow text-center"
+                                    className="w-14 h-14 aspect-square rounded-full bg-black dark:bg-[#2874f0] flex items-center justify-center text-2xl font-bold text-white border border-[#2874f0] shadow text-center"
                                     initial={{ scale: 0.7, opacity: 0 }}
                                     whileInView={{ scale: 1, opacity: 1 }}
                                     transition={{ duration: 0.5, delay: idx * 0.15 }}
@@ -498,7 +498,7 @@ const Home2 = () => {
             </section>
             {/*new section*/}
             {/* Practice Areas Section */}
-            <section className={`py-16 bg-white dark:bg-black`}>
+            <section className={`py-8 bg-white dark:bg-black`}>
                 <div className="container mx-auto px-4">
                     <h2 className={`text-4xl font-serif font-bold text-center mb-12`}>
                         {t.practiceAreasTitle}
@@ -546,7 +546,7 @@ const Home2 = () => {
                         <div className="lg:w-2/3">
                             <div className="relative">
                                 {/* Connector line */}
-                                <div className="absolute left-8 top-12 bottom-12 w-1 bg-blue-200 dark:bg-[#2874f0] transform -translate-x-1/2 z-0"></div>
+                                <div className="absolute left-8 top-12 bottom-12 w-1 bg-[#2874f0]/30 dark:bg-[#2874f0] transform -translate-x-1/2 z-0"></div>
 
                                 <div className="space-y-12 relative z-10">
                                     {processSteps.map((step, index) => (
@@ -557,26 +557,26 @@ const Home2 = () => {
                                         >
                                             <div className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg ${
                                               activeStep === index
-                                                ? 'bg-blue-900 text-white'
-                                                : 'bg-white text-blue-900 dark:bg-black dark:text-[#2874f0] dark:border dark:border-[#2874f0]'
+                                                ? 'bg-[#2874f0] text-white'
+                                                : 'bg-white text-[#2874f0] dark:bg-black dark:text-[#2874f0] dark:border dark:border-[#2874f0]'
                                             }`}>
                                               {step.icon}
                                             </div>
                                             <div className={`ml-6 p-6 rounded-lg flex-1 ${
                                               activeStep === index
-                                                ? 'bg-blue-900 text-white shadow-xl'
+                                                ? 'bg-[#2874f0] text-white shadow-xl'
                                                 : 'bg-white text-gray-800 shadow-md dark:bg-black dark:text-white dark:border dark:border-[#2874f0]'
                                             }`}>
                                               <div className="flex justify-between items-start mb-2">
                                                 <h3 className="text-xl font-serif font-bold">{step.title}</h3>
-                                                <span className="text-sm bg-blue-100 text-blue-900 px-2 py-1 rounded-full dark:bg-[#2874f0] dark:text-white">
+                                                <span className="text-sm bg-blue-100 text-[#2874f0] px-2 py-1 rounded-full dark:bg-[#2874f0] dark:text-white">
                                                   {step.duration}
                                                 </span>
                                               </div>
                                               <p className="mb-4">{step.description}</p>
                                               <div className="flex flex-wrap gap-2">
                                                 {step.participants.map((participant, i) => (
-                                                  <span key={i} className={`text-xs px-2 py-1 bg-blue-700 bg-opacity-20 rounded-full dark:bg-[#2874f0] dark:bg-opacity-30 dark:text-white`}>
+                                                  <span key={i} className={`text-xs px-2 py-1 bg-[#2874f0] bg-opacity-20 rounded-full dark:bg-[#2874f0] dark:bg-opacity-30 dark:text-white`}>
                                                     {participant}
                                                   </span>
                                                 ))}
@@ -590,7 +590,7 @@ const Home2 = () => {
 
                         {/* Process Overview */}
                         <div className="lg:w-1/3 bg-white p-6 rounded-lg shadow-md dark:bg-black dark:text-white">
-                            <h3 className="text-2xl font-serif font-bold text-blue-900 mb-4 dark:text-[#2874f0]">
+                            <h3 className="text-2xl font-serif font-bold text-[#2874f0] mb-4 dark:text-[#2874f0]">
                               {processSteps[activeStep].title}
                             </h3>
                             <div className="mb-6">
@@ -600,7 +600,7 @@ const Home2 = () => {
                               </div>
                               <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
                                 <div
-                                  className="bg-blue-900 h-2 rounded-full dark:bg-[#2874f0]"
+                                  className="bg-[#2874f0] h-2 rounded-full dark:bg-[#2874f0]"
                                   style={{ width: `${((activeStep + 1) / processSteps.length * 100)}%` }}
                                 ></div>
                               </div>
@@ -609,7 +609,7 @@ const Home2 = () => {
                             <div className="space-y-4">
                               <div>
                                 <h4 className="font-bold text-gray-700 mb-2 dark:text-white">Current Phase</h4>
-                                <p className="text-blue-900 dark:text-[#2874f0]">{processSteps[activeStep].title}</p>
+                                <p className="text-[#2874f0] dark:text-[#2874f0]">{processSteps[activeStep].title}</p>
                               </div>
                               <div>
                                 <h4 className="font-bold text-gray-700 mb-2 dark:text-white">Estimated Duration</h4>
@@ -626,8 +626,8 @@ const Home2 = () => {
                             </div>
 
                             <button
-                                className="mt-8 w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-4 rounded-lg transition-colors dark:bg-[#2874f0]"
-                                onClick={() => navigate("/contact")}
+                                className="mt-8 w-full bg-[#2874f0] hover:bg-[#2874f0]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors dark:bg-[#2874f0]"
+                                onClick={() => navigate('/contact')}
                             >
                               Start Your Legal Process
                             </button>
@@ -661,10 +661,10 @@ const Home2 = () => {
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-4">
                                         <div className="flex items-center">
-                                            <div className="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center text-white mr-3">
+                                            <div className="w-12 h-12 rounded-full bg-[#2874f0] flex items-center justify-center text-white mr-3">
                                                 <span role="img" aria-label="calendar">{webinar.icon}</span>
                                             </div>
-                                            <div className="text-blue-800 dark:text-blue-300 font-semibold">{webinar.date}</div>
+                                            <div className="text-[#2874f0] dark:text-[#2874f0] font-semibold">{webinar.date}</div>
                                         </div>
                                         <div className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
                                             CLE Credit Available
@@ -679,8 +679,8 @@ const Home2 = () => {
                                     </p>
 
                                     <div className="flex justify-between items-center">
-                                        <button
-                                            className="bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-5 rounded transition-colors text-sm"
+                    <button
+                      className="bg-[#2874f0] hover:bg-[#0f5ed1] text-white font-medium py-2 px-5 rounded transition-colors text-sm"
                                             onClick={() => handleRegisterClick(webinar)}
                                         >
                                             Register Now
@@ -835,7 +835,7 @@ const Home2 = () => {
                 <div className="absolute inset-0 bg-black/60 pointer-events-none"></div>
                 <div className="max-w-2xl w-full mx-auto px-4 text-center relative z-10">
                     <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">{t.ctaTitle}</h2>
-                    <p className="text-lg text-blue-200 mb-8">{t.ctaDesc}</p>
+                    <p className="text-lg text-white mb-8">{t.ctaDesc}</p>
                     <button
                         className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:bg-blue-200 transition-all text-xl"
                         onClick={() => navigate("/contact")}

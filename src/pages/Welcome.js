@@ -7,6 +7,7 @@ const translations = {
     // welcome: "Welcome to",
     // stackly: "STACKLY",
     welcomeBack: "Welcome back, Please login into an account",
+    welcomeSignUp: "Welcome back, please create new account",
     email: "Your Username",
     password: "Enter Password",
     forgot: "Forgot password?",
@@ -15,7 +16,7 @@ const translations = {
     firstName: "First Name",
     lastName: "Last Name",
     signUp: "Sign Up",
-    alreadyHave: "Already have an account? Login",
+    alreadyHave: "Already have an account?",
     resetPassword: "Reset Password",
     resetEmail: "Enter your registered email",
     sendReset: "Send Reset Link",
@@ -30,6 +31,7 @@ const translations = {
     // welcome: "مرحبًا في",
     // stackly: "STACKLY",
     welcomeBack: "مرحبًا بعودتك، يرجى تسجيل الدخول إلى حسابك",
+    welcomeSignUp: "مرحبًا بعودتك، يرجى إنشاء حساب جديد",
     email: "اسم المستخدم",
     password: "أدخل كلمة المرور",
     forgot: "نسيت كلمة المرور؟",
@@ -53,6 +55,7 @@ const translations = {
     // welcome: "ברוכים הבאים ל",
     // stackly: "STACKLY",
     welcomeBack: "ברוך שובך, אנא התחבר לחשבון שלך",
+    welcomeSignUp: "ברוך שובך, אנא צור חשבון חדש",
     email: "שם משתמש",
     password: "הזן סיסמה",
     forgot: "שכחת סיסמה?",
@@ -200,7 +203,7 @@ const Welcome = () => {
           {!isForgotPassword ? (
             <>
               <p className="mb-8 text-lg text-[#0a2342] font-semibold text-center">
-                {t.welcomeBack}
+                {isLogin ? t.welcomeBack : t.welcomeSignUp}
               </p>
               {isLogin ? (
                 <form onSubmit={handleLoginSubmit} style={styles.form}>

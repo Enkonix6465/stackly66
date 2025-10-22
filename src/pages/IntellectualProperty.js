@@ -258,12 +258,7 @@ const IntellectualProperty= () => {
                     <div className="text-sm">Continents served</div>
                   </div>
                 </div>
-                <button 
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-                  onClick={() => handleGetStarted("/case-studies")}
-                >
-                  Read Full Case Study
-                </button>
+                
               </div>
               <div className="lg:w-1/2">
                 <img

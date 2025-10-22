@@ -7,7 +7,7 @@ import videohero from "../images/about-law.mp4";
 import team1 from '../images/team1.jpg';
 import team2 from '../images/team2.jpg';
 import team3 from '../images/team3.jpg';
-import team4 from '../images/team4.jpg';  
+import team4 from '../images/team4.jpg';
 
 // Translations object for multi-language support
 const translations = {
@@ -15,7 +15,7 @@ const translations = {
     // Hero Section
     heroTitle: "Legal Expertise You Can Trust",
     heroSubtitle: "Protecting your rights and interests with decades of experience and a proven track record.",
-    
+
     // Mission Section
     missionTitle: "Our Mission",
     missionQuote: "To provide exceptional legal representation with unwavering integrity, personalized attention, and a commitment to achieving the best possible outcomes for our clients.",
@@ -31,11 +31,11 @@ const translations = {
     clientFocusText: "Personalized attention and tailored solutions",
     innovationLabel: "Innovation:",
     innovationText: "Creative approaches to complex legal challenges",
-    
+
     // Journey Section
     journeyTitle: "Our Journey",
     journeySubtitle: "For nearly two decades, we have been dedicated to serving our clients with excellence and integrity.",
-    
+
     // Timeline Data
     timeline: [
       { year: '2005', title: 'Firm Establishment', description: 'Founded with a vision to provide exceptional legal services with integrity and excellence.' },
@@ -44,7 +44,7 @@ const translations = {
       { year: '2020', title: 'Digital Transformation', description: 'Implemented advanced technology solutions for more efficient client service.' },
       { year: '2023', title: 'Pro Bono Initiative', description: 'Launched our community outreach program, providing free legal services to those in need.' },
     ],
-    
+
     // Legacy Section
     legacyTitle: "Our Enduring Legacy",
     legacySubtitle: "For generations, we have built a reputation founded on excellence, integrity, and transformative legal advocacy.",
@@ -56,11 +56,11 @@ const translations = {
     trustTitle: "Building Trust Through Generations",
     trustText: "Our firm has represented families and businesses across generations, building relationships that span decades. This continuity allows us to provide unparalleled insight and consistency in our legal counsel.",
     trustQuote: "The measure of a great law firm is not in cases won, but in trust earned and maintained over time.",
-    
+
     // Team Section
     teamTitle: "Our Legal Team",
     teamSubtitle: "Our attorneys bring decades of combined experience and a track record of success in complex legal matters.",
-    
+
     // Team Members
     teamMembers: [
       { name: 'Robert Johnson', role: 'Senior Partner', specialty: 'Corporate Law' },
@@ -68,7 +68,7 @@ const translations = {
       { name: 'Michael Chen', role: 'Partner', specialty: 'Intellectual Property' },
       { name: 'Elizabeth Martinez', role: 'Senior Associate', specialty: 'Family Law' },
     ],
-    
+
     // Practice Areas
     practiceAreas: [
       { title: 'Corporate Law', description: 'Business formation, mergers & acquisitions, compliance, and corporate governance.' },
@@ -76,7 +76,7 @@ const translations = {
       { title: 'Family Law', description: 'Divorce, child custody, adoption, and other domestic matters.' },
       { title: 'Estate Planning', description: 'Wills, trusts, probate, and estate administration.' },
     ],
-    
+
     // CTA Section
     ctaTitle: "Schedule a Consultation",
     ctaText: "Contact us today to discuss your legal needs and learn how our experienced team can help you achieve your objectives.",
@@ -86,7 +86,7 @@ const translations = {
     // Hero Section
     heroTitle: "خبرة قانونية يمكنكم الوثوق بها",
     heroSubtitle: "حماية حقوقكم ومصالحكم بعقود من الخبرة وسجل حافل بالنجاحات.",
-    
+
     // Mission Section
     missionTitle: "مهمتنا",
     missionQuote: "تقديم تمثيل قانوني استثنائي بنزاهة لا تتزعزع واهتمام شخصي والتزام بتحقيق أفضل النتائج الممكنة لعملائنا.",
@@ -102,11 +102,11 @@ const translations = {
     clientFocusText: "اهتمام شخصي وحلول مخصصة",
     innovationLabel: "الابتكار:",
     innovationText: "مناهج إبداعية للتحديات القانونية المعقدة",
-    
+
     // Journey Section
     journeyTitle: "رحلتنا",
     journeySubtitle: "لما يقارب عقدين من الزمان، كرسنا جهودنا لخدمة عملائنا بتميز ونزاهة.",
-    
+
     // Timeline Data
     timeline: [
       { year: '2005', title: 'تأسيس الشركة', description: 'تأسست برؤية لتقديم خدمات قانونية استثنائية بنزاهة وتميز.' },
@@ -115,7 +115,7 @@ const translations = {
       { year: '2020', title: 'التحول الرقمي', description: 'طبقنا حلول تكنولوجية متقدمة لخدمة عملاء أكثر كفاءة.' },
       { year: '2023', title: 'مبادرة الخدمة المجانية', description: 'أطلقنا برنامج التواصل المجتمعي، نقدم خدمات قانونية مجانية للمحتاجين.' },
     ],
-    
+
     // Legacy Section
     legacyTitle: "إرثنا الدائم",
     legacySubtitle: "لأجيال، بنينا سمعة مؤسسة على التميز والنزاهة والدفاع القانوني التحويلي.",
@@ -127,11 +127,11 @@ const translations = {
     trustTitle: "بناء الثقة عبر الأجيال",
     trustText: "مثلت شركتنا العائلات والشركات عبر الأجيال، وبنت علاقات تمتد لعقود. هذا الاستمرار يتيح لنا تقديم بصيرة وثبات لا مثيل لهما في استشاراتنا القانونية.",
     trustQuote: "مقياس الشركة القانونية العظيمة ليس في القضايا المنتصرة، ولكن في الثقة المكتسبة والمحافظ عليها عبر الزمن.",
-    
+
     // Team Section
     teamTitle: "فريقنا القانوني",
     teamSubtitle: "يجلب محامونا عقوداً من الخبرة المجمعة وسجل نجاح في القضايا القانونية المعقدة.",
-    
+
     // Team Members
     teamMembers: [
       { name: 'روبرت جونسون', role: 'شريك أول', specialty: 'القانون المؤسسي' },
@@ -139,7 +139,7 @@ const translations = {
       { name: 'مايكل تشين', role: 'شريك', specialty: 'الملكية الفكرية' },
       { name: 'إليزابيث مارتينيز', role: 'مشارك أول', specialty: 'قانون الأسرة' },
     ],
-    
+
     // Practice Areas
     practiceAreas: [
       { title: 'القانون المؤسسي', description: 'تكوين الأعمال، عمليات الدمج والاستحواذ، الامتثال، والحوكمة المؤسسية.' },
@@ -147,7 +147,7 @@ const translations = {
       { title: 'قانون الأسرة', description: 'الطلاق، حضانة الأطفال، التبني، وأمور أسرية أخرى.' },
       { title: 'تخطيط التركات', description: 'الوصايا، الصناديق الاستئمانية، الوصاية، وإدارة التركات.' },
     ],
-    
+
     // CTA Section
     ctaTitle: "حدد موعد استشارة",
     ctaText: "اتصل بنا اليوم لمناقشة احتياجاتكم القانونية وتعلم كيف يمكن لفريقنا ذو الخبرة مساعدتكم في تحقيق أهدافكم.",
@@ -157,7 +157,7 @@ const translations = {
     // Hero Section
     heroTitle: "מומחיות משפטית שניתן לסמוך עליה",
     heroSubtitle: "הגנה על זכויותיכם ואינטרסים שלכם עם עשרות שנות ניסיון ורקורד הוכח של הצלחה.",
-    
+
     // Mission Section
     missionTitle: "המשימה שלנו",
     missionQuote: "לספק ייצוג משפטי יוצא דופן עם יושרה בלתי מתערערת, תשומת לב אישית והתחייבות להשגת התוצאות הטובות ביותר האפשריות עבור לקוחותינו.",
@@ -173,11 +173,11 @@ const translations = {
     clientFocusText: "תשומת לב אישית ופתרונות מותאמים",
     innovationLabel: "חדשנות:",
     innovationText: "גישות יצירתיות לאתגרים משפטיים מורכבים",
-    
+
     // Journey Section
     journeyTitle: "המסע שלנו",
     journeySubtitle: "במשך כמעט שני עשורים, התמסרנו לשרת את לקוחותינו במצוינות ויושרה.",
-    
+
     // Timeline Data
     timeline: [
       { year: '2005', title: 'הקמת המשרד', description: 'נוסד עם חזון לספק שירותים משפטיים יוצאי דופן ביושרה ומצוינות.' },
@@ -186,7 +186,7 @@ const translations = {
       { year: '2020', title: 'טרנספורמציה דיגיטלית', description: 'יישמנו פתרונות טכנולוגיים מתקדמים לשירות לקוחות יעיל יותר.' },
       { year: '2023', title: 'יוזמת פרו בונו', description: 'השקנו את תוכנית ההסברה הקהילתית שלנו, המספקת שירותים משפטיים חינם לנזקקים.' },
     ],
-    
+
     // Legacy Section
     legacyTitle: "המורשת הנצחית שלנו",
     legacySubtitle: "במשך דורות, בנינו מוניטין המבוסס על מצוינות, יושרה וסנגוריה משפטית משנה חיים.",
@@ -198,11 +198,11 @@ const translations = {
     trustTitle: "בניית אמון על פני דורות",
     trustText: "המשרד שלנו ייצג משפחות ועסקים על פני דורות, בונה יחסים הנמשכים עשרות שנים. הרציפות הזו מאפשרת לנו לספק תובנה ועקביות ללא תחרות בייעוץ המשפטי שלנו.",
     trustQuote: "המדד למשרד עורכי דין גדול אינו בתיקים שזכו, אלא באמון שנרכש ונשמר לאורך זמן.",
-    
+
     // Team Section
     teamTitle: "הצוות המשפטי שלנו",
     teamSubtitle: "עורכי הדין שלנו מביאים עשרות שנות ניסיון משולב ורקורד הצלחה בענייני משפט מורכבים.",
-    
+
     // Team Members
     teamMembers: [
       { name: 'רוברט ג\'ונסון', role: 'שותף בכיר', specialty: 'משפט תאגידי' },
@@ -210,7 +210,7 @@ const translations = {
       { name: 'מייקל צ\'ן', role: 'שותף', specialty: 'קניין רוחני' },
       { name: 'אליזבת מרטינז', role: 'שותפה בכירה', specialty: 'משפט משפחה' },
     ],
-    
+
     // Practice Areas
     practiceAreas: [
       { title: 'משפט תאגידי', description: 'הקמת עסקים, מיזוגים ורכישות, ציות, וממשל תאגידי.' },
@@ -218,7 +218,7 @@ const translations = {
       { title: 'משפט משפחה', description: 'גירושין, משמורת ילדים, אימוץ, ועניינים משפחתיים אחרים.' },
       { title: 'תכנון עיזבון', description: 'צוואות, נאמנויות, צווי קיום צוואה, וניהול עיזבונות.' },
     ],
-    
+
     // CTA Section
     ctaTitle: "קבעו פגישת ייעוץ",
     ctaText: "צרו איתנו קשר היום כדי לדון בצרכים המשפטיים שלכם ולהיכר עם הדרך שבה הצוות המנוסה שלנו יכול לעזור לכם להשיג את היעדים שלכם.",
@@ -274,7 +274,7 @@ function AboutUs() {
     };
 
     window.addEventListener('languageChange', handleLanguageChange);
-    
+
     return () => {
       window.removeEventListener('languageChange', handleLanguageChange);
     };
@@ -415,7 +415,7 @@ function AboutUs() {
       {/* Timeline Section */}
       <section
         ref={storyRef}
-        className={`py-20 px-4 bg-white dark:bg-black transition-opacity duration-1000 ${storyVisible ? 'opacity-100' : 'opacity-0'}`}
+        className={`py-10 px-4 bg-white dark:bg-black transition-opacity duration-1000 ${storyVisible ? 'opacity-100' : 'opacity-0'}`}
       >
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -455,7 +455,7 @@ function AboutUs() {
       {/*new section*/}
       <section
         ref={legacyRef}
-        className={`py-20 px-4 transition-all duration-1000 ${legacyVisible ? 'opacity-100' : 'opacity-0'
+        className={`py-10 px-4 transition-all duration-1000 ${legacyVisible ? 'opacity-100' : 'opacity-0'
           }`}
       >
         <div className="max-w-6xl mx-auto">
